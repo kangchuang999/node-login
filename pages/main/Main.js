@@ -21,9 +21,9 @@ class App extends React.Component {
                         onClick={this.handleClick}
                         style={{ lineHeight: '64px' }}
                     >
-                        <Menu.Item key="/home">login</Menu.Item>
-                        <Menu.Item key="/main">article</Menu.Item>
-                        <Menu.Item key="/editor">editor</Menu.Item>
+                        <Menu.Item key="/home">登录</Menu.Item>
+                        <Menu.Item key="/main">文章</Menu.Item>
+                        <Menu.Item key="/editor">编辑</Menu.Item>
                     </Menu>
                 </Header>
                 <Content style={{ padding: '0 50px' }}>

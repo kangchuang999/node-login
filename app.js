@@ -20,17 +20,15 @@ app.use(convert(koaLogger()));
 app.use(bodyParser());
 
 // 配置服务端模板渲染引擎中间件
-app.use(views(path.join(__dirname, './view'), {
-    extension: 'ejs'
-}));
+app.use(views(path.join(__dirname, './static/html/')));
 
 // 配置静态资源加载中间件
 app.use(convert(koaStatic(
-    path.join(__dirname , './static')
+    path.join(__dirname , './')
 )))
 
 mongoose.Promise = global.Promise;
-// mongoose.connect(config.database);
+mongoose.connect(config.database);
 
 // 初始化路由中间件
 app.use(routers.routes()).use(routers.allowedMethods())

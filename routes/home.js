@@ -8,9 +8,7 @@ const userInfoController = require('./../controller/user-info');
 const routers = router
     .get('/', async (ctx) => {
         const title = 'login home';
-        await ctx.render('home', {
-            title
-        })
+        await ctx.render('home')
     })
     .post('/signup', userInfoController.signUp)
     .post('/signin', userInfoController.signIn)
